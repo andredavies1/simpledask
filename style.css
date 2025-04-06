@@ -20,8 +20,8 @@ header{
 }
 
 main{
-    margin-left: 30px;
-    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
 }
 
 .logo{
@@ -46,5 +46,5 @@ main{
 .dash-board-container{
     background-color: #F9F8F8;
     width: 1099px;
-
+    border-radius: 0px 24px 24px 0px;
 }
