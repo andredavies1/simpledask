@@ -35,8 +35,17 @@ pencilSquare.addEventListener("click", function(){
         newNavaBarTab.textContent = newTabInput.value || "Untitled" // listening to input changes and reflecting the content on new tab
     })
 
+    tab.addEventListener("focus", function(e) {
+        e.target.classList.add("highlight");
+    });   
+
 })
 
+const tab = document.getElementById(`new-${tabCount}`)
 
+
+
+
+console.log(document.getElementById(`new-${tabCount}`));
 
 
