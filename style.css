@@ -120,13 +120,19 @@ ul{
     justify-content: center;
 }
 
-.new-tab{
+.new-tab .new-tab-nav-bar{
     border: none;
     font-family: "Comic Sans MS";
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
 }
+
+.new-tab-nav-bar{
+    border-right: solid 2.5px #efefef;
+    font-size: 14px;
+}
+
 
 form, input, textarea, select, button {
     all: unset;

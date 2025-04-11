@@ -1,9 +1,16 @@
 const pencilSquare = document.getElementById("pencil-square");
-const tabMenuContainer = document.getElementById("tab-menu-container");
 const tabInput = document.getElementById("tab-input");
+
+const tabMenuContainer = document.getElementById("tab-menu-container");
 const tabsNavBar = document.getElementById("tabs-navabar");
 
+const folderCreate = document.getElementById("folder-create")
+const folderIcon = document.getElementById("folder-icon")
+
+
+
 let tabCount = 0 // Creating a Unique ID for tabCount
+let tabArray = [] // Creating an Array to store our tab's (input), manage the highlight feature
 
 // Prevent default form submission
 tabInput.addEventListener("submit", function (e) {
@@ -23,10 +30,11 @@ pencilSquare.addEventListener("click", function(){
     newTabInput.autocomplete = "off"
 
     tabInput.appendChild(newTabInput) // appending the new input element to our selector (tabInput)
+    tabArray.push(newTabInput) // Pushing our new input to tab
 
     const newNavaBarTab = document.createElement('li') // Creating new li element
     newNavaBarTab.id = `tab-${tabCount}`
-    newNavaBarTab.classList.add("new-tab")
+    newNavaBarTab.classList.add("new-tab-nav-bar")
     newNavaBarTab.textContent = "Untitled" // setting default text on a new tab "placeholder"
 
     tabsNavBar.appendChild(newNavaBarTab) // appending to selector
@@ -36,16 +44,28 @@ pencilSquare.addEventListener("click", function(){
     })
 
     newTabInput.addEventListener("focus", function(e) {
-        e.target.classList.add("highlight");
+        for(let tab of tabArray){
+            tab.classList.remove("highlight") // looping through the arrayTab and removing the highlight class
+        }
+        e.target.classList.add("highlight"); // add's highlight class
     });   
-
 })
 
-const tab = document.getElementById(`new-${tabCount}`)
+
+folderIcon.addEventListener("click", function(){ 
+                                                        // Listening to click event on the folder Icon and creating an Input.
+    const newFolder = document.createElement("input")
+    newFolder.type = "text"
+    newFolder.name = "new-folder"
+    newFolder.id = "new-folder"
+    newFolder.placeholder = "hello World"
+
+    folderCreate.appendChild(newFolder) // Appending new created input to
+})
 
 
 
 
-console.log(document.getElementById(`new-${tabCount}`));
+
 
 
