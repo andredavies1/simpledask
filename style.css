@@ -47,7 +47,7 @@ main{
 
 
 .menu-bar-container{
-    height: 633px;
+    height: 669px;
     border: 1px solid var(--minimalist, rgba(0, 0, 0, 0.05));
    
 }
@@ -100,12 +100,40 @@ ul{
 .dash-board-container{
     display: flex;
     width: 1099px;
-    height: 598px;
+    height: 634px;
     background-color: #F9F8F8;
     border-bottom: 1px solid var(--minimalist, rgba(0, 0, 0, 0.05));;
     border-right: 1px solid var(--minimalist, rgba(0, 0, 0, 0.05));;
     border-bottom-right-radius: 24px;
 
+}
+
+.dash-tabs-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.to-do-container{
+    margin-top: 20px;
+    display: flex;
+    position: absolute;
+    width: 1056px;
+    height: 530px;
+    border-radius: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    background: #FFF;
+}
+
+.to-do-input{
+    display: flex;
+    margin-top: 500px;
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    background: #FFF;
 }
 
 .main-dashboard{

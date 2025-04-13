@@ -58,7 +58,7 @@ folderIcon.addEventListener("click", function(){
     newFolder.type = "text"
     newFolder.name = "new-folder"
     newFolder.id = "new-folder"
-    newFolder.placeholder = "hello World"
+    newFolder.placeholder = "Untitled Folder"
 
     folderCreate.appendChild(newFolder) // Appending new created input to folder div
 })
