@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -127,13 +126,25 @@ ul{
 
 .to-do-input{
     display: flex;
-    margin-top: 500px;
     position: absolute;
-    width: 300px;
-    height: 100px;
+    top: 568.5px;
+    right: 125px; 
+    width: 950px;
+    height: 45px;
     border-radius: 15px;
     border: 1px solid rgba(0, 0, 0, 0.20);
     background: #FFF;
+}
+
+button{
+    margin: 0 autp;
+}
+
+.do-it {
+    display: flex;
+    position: absolute;
+    top: 580px;         /* Replaces margin-top for more clarity */
+    right: 50px;       /* Pushes the element 100px from the right edge */
 }
 
 .main-dashboard{
@@ -173,4 +184,3 @@ form, input, textarea, select, button {
     font-weight: bold;
     accent-color: #bd301d;
 }
-  
